@@ -1,0 +1,22 @@
+{
+  "name": "testcafe-example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adilson Schmitt Junior",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-hapi": "^10.0.0",
+    "eslint-plugin-hapi": "^4.0.0",
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
+    "joi": "^10.2.0",
+    "pug": "^2.0.0-beta10",
+    "testcafe": "^0.12.1",
+    "vision": "^4.1.1"
+  }
+}
