@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cp -r ./node_modules/tachyons/css ./server/public",
+    "start": "node server/server.js"
   },
   "author": "Adilson Schmitt Junior",
   "license": "MIT",
@@ -13,10 +14,14 @@
     "eslint-config-hapi": "^10.0.0",
     "eslint-plugin-hapi": "^4.0.0",
     "hapi": "^16.1.0",
+    "hapi-auth-cookie": "^6.1.1",
     "inert": "^4.1.0",
     "joi": "^10.2.0",
+    "nedb": "^1.8.0",
     "pug": "^2.0.0-beta10",
+    "tachyons": "^4.6.2",
     "testcafe": "^0.12.1",
+    "uuid": "^3.0.1",
     "vision": "^4.1.1"
   }
 }

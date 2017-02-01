@@ -1,6 +1,21 @@
-body
-    h1 Welcome!
-    div
-        a Login
-        a Register
+extends layout
+
+block content
+    br
+    br
+    br
+    br
+    br    
+    .row
+        .col-sm-6.offset-md-3
+            .card
+                .card-block
+                    h1.card-title Welcome!
+                    p.card-text Please, sign up or sign in to use our app :)
+                    a.btn.btn-primary(href="/register") Sign up
+                    if user && user.name
+                        a.btn.btn-default.btn-outline(href="/login") Enter as #{user.name}
+                        a.btn.btn-default(href="/logout") Enter as someone else
+                    else
+                        a.btn.btn-default(href="/login") Sign in
 

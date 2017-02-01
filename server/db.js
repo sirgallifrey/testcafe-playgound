@@ -1,18 +1,25 @@
 'use strict';
 
-const MemoryDB = require('./memoryDB/memoryDB');
+const neDB = require('nedb');
 
 const internals = {};
 
-internals.db = new MemoryDB();
+internals.db = {};
 
-internals.db.addCollection('users');
+exports.init = (cb) => {
 
-internals.db.users.insertOne({
+    internals.db.users = new neDB();
 
-    name: 'Administrator',
-    email: 'admin@admin.com',
-    password: '123123'
-});
+    internals.db.users.insert({
 
-module.exports = internals.db;
+        name: 'Administrator',
+        email: 'admin@admin.com',
+        password: '123123'
+    }, (err, doc) => {
+
+        if (err) {
+            cb(err, null);
+        }
+        return cb(null, internals.db);
+    });
+};
