@@ -23,7 +23,7 @@ block content
                                 .form-control-feedback= errors.username.message
                         div(class=("form-group" + ((errors && errors.password) ? ' has-danger' : ''))  )
                             label.form-control-label(for="password") Password
-                            input(type="text" class="form-control" id="password" name="password" )
+                            input(type="password" class="form-control" id="password" name="password" )
                             if errors && errors.password
                                 .form-control-feedback= errors.password.message
                         div
